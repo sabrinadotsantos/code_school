@@ -1,0 +1,777 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--poppins300);
+}
+
+:root {
+    --dark_blue: #12264B;
+    --light_blue: #00B1EB;
+    --yellow: #FFD100;
+    --grey: #EDEDED;
+    --dark_blue2: #252936;
+
+    --poppins300: 'Poppins', sans-serif;
+    --poppins500: 'Poppins', sans-serif;
+
+}
+
+/* header {
+    background-color: var(--dark_blue);
+    height: 100px;
+    display: flex;
+    align-items: center;
+} */
+
+/* .posicionamento {
+    width: auto;
+    margin: 0 auto;
+
+} */
+
+.posicionamento_header {
+    background-color: var(--dark_blue);
+    /* background-color: blueviolet; */
+    display: flex;
+    height: 110px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.posicionamento_header img {
+    width: 100px;
+    margin: 20px 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    width: 550px;
+    margin-right: 700px;
+}
+
+header a {
+
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: var(--font1);
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+
+h1 {
+    width: 1em;
+    position: absolute;
+    left: -999em;
+    overflow: hidden;
+}
+
+
+/*______________________SEÇAO BANNER______________*/
+
+.banner {
+    background-image: url(./img/banner_meteor_naestrada.png);
+    height: calc(100vh - 80px);
+    background-size: cover;
+    display: flex;
+}
+
+
+.banner_conteudo {
+    color: white;
+    text-transform: uppercase;
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: column;
+    margin: 200px 0 0 100px;
+
+
+    width: 700px;
+    height: 200px;
+
+}
+
+.banner_conteudo h2 {
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+
+}
+
+.banner_conteudo p {
+    margin-top: 40px;
+    font-size: 16px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+
+}
+
+.banner_conteudo .btn_banner {
+    background-color: var(--yellow);
+    color: var(--dark_blue);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    text-align: center;
+
+    margin-top: 30px;
+    border-radius: 30px;
+    width: 150px;
+    height: 55px;
+    padding: 10px;
+    font-weight: bolder
+}
+
+
+
+/*______________________SEÇAO OFERTAS ESPECIAIS______________*/
+
+.ofertas_h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 30px;
+    gap: 10px;
+    text-transform: capitalize;
+
+}
+
+.ofertas_h2 .h2_ofertas {
+    color: var(--dark_blue);
+}
+
+.ofertas_h2 .h2_especiais {
+    color: var(--light_blue);
+}
+
+/*OFERTAS*/
+
+.ofertas_especiais {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    /* align-items: center; */
+
+}
+
+.card_ofertas1,
+.card_ofertas2,
+.card_ofertas3 {
+    background-color: #195F8C;
+    width: 350px;
+    height: 150px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border-radius: 5px;
+}
+
+.card_ofertas1 h3,
+.card_ofertas2 h3,
+.card_ofertas3 h3 {
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.card_ofertas1 h4,
+.card_ofertas2 h4,
+.card_ofertas3 h4 {
+    font-size: 12px;
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* background-color: #12264B; */
+    font-weight: lighter;
+
+}
+
+.card_ofertas1 img,
+.card_ofertas2 img,
+.card_ofertas3 img {
+    width: 250px;
+    /* position: absolute; */
+    margin-top: 30px;
+    margin-left: 30px;
+
+}
+
+.card_ofertas1 span,
+.card_ofertas2 span,
+.card_ofertas3 span {
+    font-size: 16px;
+    color: var(--dark_blue);
+    font-weight: 900;
+    font-size: 18px;
+    margin: 8px auto;
+
+}
+
+.card_ofertas1 h5,
+.card_ofertas2 h5,
+.card_ofertas3 h5 {
+    font-size: 12px;
+    color: #000000;
+    margin: 2px auto;
+
+}
+
+.card_ofertas1 .btn_card,
+.card_ofertas2 .btn_card,
+.card_ofertas3 .btn_card {
+    background-color: var(--light_blue);
+
+    width: 230px;
+    padding: 10px 10px;
+    margin: 10px auto;
+    border-radius: 30px;
+
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+
+}
+
+.card_ofertas1 h6,
+.card_ofertas2 h6,
+.card_ofertas3 h6 {
+    color: #000000;
+    font-size: 12px;
+    text-transform: capitalize;
+    margin: 1px auto;
+
+}
+
+
+/*______________________SEÇAO PROMOCOES______________*/
+
+
+.promocoes h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 330px;
+
+
+    font-size: 40px;
+    color: var(--yellow);
+    text-transform: capitalize;
+
+}
+
+.promocoes p {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    margin-bottom: 60px;
+
+    color: white;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.promocoes>div {
+    background-color: var(--dark_blue);
+    height: 480px;
+    margin-top: -170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card_promo1 img,
+.card_promo2 img,
+.card_promo3 img,
+.card_promo4 img,
+.card_promo5 img {
+    width: 200px;
+    border-radius: 20px 20px 0px 0px;
+    position: relative;
+    margin: 10px;
+}
+
+.card_azul {
+    background-color: var(--dark_blue2);
+    width: 210px;
+    height: 100px;
+
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    padding-left: 20px;
+
+    margin: 5px;
+    margin-top: -25px;
+
+    border-radius: 20px;
+    position: absolute;
+
+}
+
+.pneu_preco {
+    background-color: white;
+    border-radius: 20px;
+    height: 25px;
+    width: 110px;
+    margin-top: -5px;
+    margin-left: 13px;
+    margin-bottom: 10px;
+    padding: 3px 10px;
+    color: var(--dark_blue);
+}
+
+.card_azul h3 {
+    color: white;
+    text-transform: capitalize;
+    font-size: 16px;
+
+    font-weight: lighter;
+}
+
+.card_azul h4 {
+    color: white;
+    font-size: 12px;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+
+.card_azul span {
+    color: var(--yellow);
+    font-size: 16px;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+
+
+
+/*______________________SEÇAO NOTICIAS RECENTES______________*/
+
+
+.noticias_h2 {
+    display: flex;
+    align-items: center;
+    margin-left: 135px;
+    margin-top: 70px;
+    text-transform: capitalize;
+    gap: 10px;
+    font-size: 20px;
+    margin-bottom: 100px;
+
+}
+
+.noticias_h2 .h2_noticias {
+    color: var(--dark_blue);
+
+}
+
+.noticias_h2 .h2_recentes {
+    color: var(--light_blue);
+
+}
+
+.noticias_recentes {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: -50px;
+    margin-left: 20px;
+
+}
+
+.noticias_recentes2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-left: 20px;
+
+}
+
+.card_noticias img {
+    width: 400px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+.card_branco {
+    width: 400px;
+    height: 350px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+    margin-top: -10px;
+
+}
+
+.card_branco h3 {
+    color: var(--dark_blue);
+    font-size: 14px;
+    margin: 10px 20px;
+    font-weight: 900;
+}
+
+.card_branco p {
+    color: var(--dark_blue);
+    font-size: 12px;
+    margin-left: 20px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.card_branco .btn_noticias {
+    background-color: var(--yellow);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+    font-size: 12px;
+
+    margin-left: 30px;
+    margin-top: 50px;
+    padding: 10px 130px;
+
+    border-radius: 30px;
+
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--dark_blue);
+
+}
+
+
+/*__________________FOOTER___________________________*/
+
+footer {
+    background-color: var(--dark_blue);
+    height: 250px;
+    margin-top: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+    color: white;
+
+
+}
+
+footer .divfooter1 img {
+    width: 100px;
+    margin: 0 -60px;
+}
+
+footer .divfooter1 h2 {
+    font-size: 16px;
+    text-transform: capitalize;
+    margin: 0 -40px;
+}
+
+footer .divfooter1 span {
+    font-size: 14px;
+    font-weight: lighter;
+    margin: 0 -38px;
+
+}
+
+footer .divfooter2 li {
+    text-transform: capitalize;
+    list-style: none;
+    font-weight: lighter;
+}
+
+footer .divfooter3 li {
+    text-transform: capitalize;
+    list-style: none;
+    font-weight: lighter;
+
+}
+
+footer .divfooter4 {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 110px;
+
+}
+
+footer .divfooter4 .insta {
+    width: 30px;
+}
+
+footer .divfooter4 .face {
+    width: 40px;
+    padding-left: 6px;
+}
+
+footer .divfooter4 .in {
+    width: 40px;
+}
+
+
+
+
+/*_____________________________SIZE 1200 ______________________*/
+
+
+@media screen and (max-width: 1200px) {
+
+
+    .posicionamento_header img {
+        width: 110px;
+        margin: -11px 90px;
+    }
+
+    .posicionamento_header nav {
+        margin-right: 100px;
+    }
+
+    .noticias_recentes {
+        display: none;
+    }
+
+    .card_promo1 img,
+    .card_promo2 img {
+        display: none;
+    }
+
+
+
+    .card_noticias img {
+        width: 300px;
+    }
+
+    .card_branco {
+        width: 300px;
+    }
+
+    .card_branco .btn_noticias {
+        padding: 10px 90px;
+    }
+
+
+    /*___________________SIZE 768 _______________________*/
+
+
+    @media screen and (max-width: 768px) {
+
+        .posicionamento_header img {
+            margin: 3px;
+        }
+
+        .menu_barras {
+            display: initial;
+            margin-right: 40px;
+
+        }
+
+        .menu_barras svg {
+            height: 50px;
+            fill: white;
+        }
+
+        .posicionamento_header {
+            position: relative;
+        }
+
+        .posicionamento_header nav {
+            display: none;
+            position: absolute;
+            right: 40px;
+            top: 50px;
+            flex-direction: column;
+            z-index: 1;
+            background-color: var(--dark_blue);
+            width: 240px;
+            padding: 30px 30px;
+            text-decoration: underline;
+            text-decoration-color: #00B1EB;
+            gap: 10px;
+            backdrop-filter: blur(10px);
+            border-radius: 20px 0px 20px 20px;
+            border: 2px solid var(--light_blue);
+        }
+
+
+        .banner {
+
+            background-repeat: no-repeat;
+            height: calc(100vh - 300px);
+        }
+
+        .banner_conteudo h2 {
+            font-size: 30px;
+        }
+
+        .banner_conteudo {
+            margin: 15px 0 0 20px;
+        }
+
+        .ofertas_h2 {
+
+            font-size: 20px;
+        }
+
+        .card_ofertas1,
+        .card_ofertas2 {
+            display: none;
+
+        }
+
+        .noticias_h2 {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            margin-left: 252px;
+        }
+
+        .noticias_recentes2 {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        footer {
+            flex-direction: column;
+            height: 500px;
+        }
+
+        footer .divfooter1 {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            order: 4;
+        }
+
+        footer .divfooter1 img {
+            width: 100px;
+            margin: 0;
+
+
+        }
+
+        footer .divfooter2,
+        footer .divfooter3 {
+            text-align: center;
+
+        }
+
+        footer .divfooter2 {
+            order: 2;
+
+        }
+
+        footer .divfooter3 {
+            order: 3;
+
+        }
+
+        footer .divfooter4 {
+            order: 1;
+            margin: 0;
+
+        }
+
+         /* _____________________SIZE 600px______________________*/
+
+
+        @media screen and (max-width: 600px){
+
+            .card_promo4{
+                display: none;
+            }
+        
+            .noticias_h2 {
+                margin-left: 170px;
+            }
+        
+        }
+
+        /* _____________________SIZE 320px______________________*/
+
+
+        @media screen and (max-width: 320px) {
+
+            .posicionamento_header nav {
+                right: 0;
+                width: 200px;
+                gap: 25px;
+            }
+
+            .card_promo3,
+            .card_promo4 {
+                display: none;
+            }
+            .banner {
+                background-image: none;
+            }
+            .banner_conteudo{
+                margin: 15px;
+            }
+
+            .banner_conteudo h2, .banner_conteudo p{
+                color: var(--dark_blue);
+                text-align: center;
+                text-shadow: none;
+                margin-top: 20px;
+            }
+
+            .banner_conteudo h2{
+                font-size: 25px;
+            }
+
+            .banner_conteudo p{
+                font-size: 16px;
+            }
+
+            .banner_conteudo .btn_banner{
+                margin-left: 70px;
+
+            }
+
+            .ofertas_h2{
+                font-size: 16px;
+                margin: 20px;
+                margin-top: -5px;
+            }
+
+            /* .card_ofertas3{
+            margin-left: 10px;
+            } */
+
+            .promocoes h2{
+                font-size: 25px;
+            }
+            
+            .promocoes p{
+                font-size: 12px;
+            }
+            .noticias_h2{
+                font-size: 16px;
+                margin-left: 52px;
+
+            }
+
+            .card_noticias img{
+                margin-left: -15px;
+            }
+
+            .card_branco{
+                margin-left: -15px;
+            }
+
+        }
+
+    }
+}
