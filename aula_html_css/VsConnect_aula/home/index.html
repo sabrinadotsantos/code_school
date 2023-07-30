@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - VsConnect</title>
+    <link rel="shortcut icon" href="../img/favicon2.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+
+    <script src="../js/script.js" defer></script> <!--adia carregamento do script-->
+</head>
+
+<body>
+    <header>
+        <div class="posicionamento_header posicionamento"> <!--classe pai-->
+            <img src="../img/logo.svg" alt="logo da pagina vsconnect">
+
+           <!-- controls - oq esta controlando -->
+            <a id="menu_barras" aria-label="abrir menu" aria-controls="menu_links" aria-expanded="false" aria-haspopup="true" class="menu_barras" href="#" onclick="mostrarMenu()"> <!-- evento - quando acontecer alguma coisa 'onclick'-->
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </a>
+            <nav id="menu_links">
+                <a href="#">home</a>
+                <a href="#">serviços</a>
+                <a href="#">cadastro</a>
+                <a href="#" class="btn_login">login</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>página inicial VSconnect</h1>
+        <section class="banner">
+            <div class="banner_conteudo">
+                <span>VSConnect</span>
+                <p>Conectando os melhores desenvolvedores independentes às mais diversas oportunidades.</p>
+                <p class="banner_li3">Conecte-se e comece a desvendar esse mundo!</p>
+                <div class="banner_botoes">
+                    <a class="btn_dev" href="#">desenvolvedor</a>
+                    <a class="btn_cli" href="#">cliente</a>
+                </div>
+            </div>
+        </section>
+        <section class="clientes posicionamento">
+            <div class="conexao">
+                <p>Desde 2015 unindo propósitos.<br>Uma nova forma de desenvolver.</p>
+            </div>
+            <div class="clientes_conteudo">
+                <img src="../img/clientes.png" alt="">
+                <div>
+                    <h2>para clientes</h2>
+                    <ul>
+                        <li>cadastrar serviços</li>
+                        <li>procurar por desenvolvedores</li>
+                    </ul>
+                    <a class="main_btn" href="#">criar conta</a>
+                </div>
+            </div>
+        </section>
+        <div class="paralax"></div>
+        <section class="desenvolvedores posicionamento"> 
+            <div class="dev_conteudo">
+                <div>
+                    <h2>para desenvolvedores</h2>
+                    <ul>
+                        <li>encontrar serviços</li>
+                        <li>divulgar suas hardskills</li>
+                    </ul>
+                    <a class="main_btn" href="#">criar conta</a>
+                </div>
+                <img src="../img/maos_dev.png" alt="">
+            </div>
+        </section>
+        <section class="servicos posicionamento">
+            <h2>Serviços</h2>
+            <div>
+                <div class="card">
+                    <img src="../img/alfinete.png" alt="">
+                    <h3>Aplicativo para PetShop</h3>
+                    <p>Possuo um Petshop e gostaria de um aplicativo para que meus clientes pudessem agendar serviços como: banho e tosa, taxi dog, hotelzinho e etc.</p>
+                    <span>Proposta: A Combinar</span>
+                </div>
+                <div class="card">
+                    <img src="../img/alfinete.png" alt="">
+                    <h3>Site para Pizzaria</h3>
+                    <p>Preciso de um site para divulgar o sabores das pizzas, o endereço, os telefones de contato, nossas redes sociais.</p>
+                    <span>Proposta: R$750,00</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="posicionamento rodape">
+            <div class="span_dicas">
+                <img src="../img/dev.png" alt="">
+                <div class="span_dicas_texto">
+                    <p>Temos algumas dicas para o seu serviço ou freela ser um sucesso, acesse nossa página de
+                        recomendações para saber mais.</p>
+                    <a class="botao botao_dicas" href="#">mais dicas</a>
+                </div>
+            </div>
+            <div class="rodape_conteudo">
+                <div class="rodape_conteudo_paginas">
+                    <h2>Páginas</h2>
+                    <ul>
+                        <li>Login</li>
+                        <li>Home</li>
+                        <li>Listar Serviços</li>
+                        <li>Cadastrar Cliente</li>
+                        <li>Cadastrar Desenvolvedor</li>
+                    </ul>
+                </div>
+                <img src="../img/logo.svg" alt="">
+                <div class="rodape_conteudo_contatos">
+                    <h2>Contatos</h2>
+                    <div>
+                        <a href="#"><img src="../img/facebook.svg" alt="#"></a>
+                        <a href="#"><img src="../img/instagram.svg" alt="#"></a>
+                        <a href="#"><img src="../img/linkedin.svg" alt="#"></a>
+                    </div>
+                    <a href="mailto:">contato@vsconnect.com</a>
+                </div>
+            </div>
+            <p>todos os direitos reservados ©.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
