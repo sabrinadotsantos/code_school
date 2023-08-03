@@ -81,13 +81,13 @@ function calcular(ano_nascimento, dia_nascimento, mes_nascimento) {
 
     // let idade = parseInt(anoAtual - ano_nascimento)
 
-    // Se o mês atual é maior que o do aniversário, então ele fez mais um ano de vida
+    // Se o mês atual é maior que o do aniversário Exemplo: mes atual = 08  > Mes de aniversario = 07 | então ele fez mais um ano de vida
     if (anoAtual.getMonth() > mes_nascimento) {
         idade++;
     } 
     
     // Se os meses são os mesmos mas os dias atuais são maiores ou iguais ao dia de aniversário, então ele fez mais um ano de vida
-    else if (anoAtual.getMonth() == mes_nascimento && hoje.getDate() >= dia_nascimento) {
+    else if (anoAtual.getMonth() == mes_nascimento && anoAtual.getDate() >= dia_nascimento) {
         idade++;
     }
 
@@ -95,10 +95,6 @@ function calcular(ano_nascimento, dia_nascimento, mes_nascimento) {
 
     return idade;
 
-
-    console.log(idade);
-
-    return idade;
 
 }
 
