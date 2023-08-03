@@ -73,11 +73,29 @@ function pegarValores() {
 
 // Passo 2 - Calcular
 
-function calcular(ano_nascimento) {
+function calcular(ano_nascimento, dia_nascimento, mes_nascimento) {
 
-    const anoAtual = new Date().getFullYear();
+    const anoAtual = new Date();
 
-    let idade = parseInt(anoAtual - ano_nascimento)
+     let idade = anoAtual.getFullYear() - ano_nascimento;
+
+    // let idade = parseInt(anoAtual - ano_nascimento)
+
+    // Se o mês atual é maior que o do aniversário, então ele fez mais um ano de vida
+    if (anoAtual.getMonth() > mes_nascimento) {
+        idade++;
+    } 
+    
+    // Se os meses são os mesmos mas os dias atuais são maiores ou iguais ao dia de aniversário, então ele fez mais um ano de vida
+    else if (anoAtual.getMonth() == mes_nascimento && hoje.getDate() >= dia_nascimento) {
+        idade++;
+    }
+
+    console.log(idade);
+
+    return idade;
+
+
     console.log(idade);
 
     return idade;
@@ -152,7 +170,6 @@ function carregarUsuarios() {
 
     if (listaUsuarios.length == 0) {
         let tabela = document.getElementById("corpo-tabela");
-idade
         tabela.innerHTML = `<tr class="linha-mensagem">
         <td colspan="6">Nenhum usuário cadastrado. </td>
     </tr>`
