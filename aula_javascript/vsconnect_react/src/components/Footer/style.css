@@ -78,6 +78,10 @@ footer {
     min-width: 250px;
 }
 
+.link{
+    text-decoration: none;
+}
+
 .rodape_conteudo_paginas ul {
     font-family: var(--font2);
     font-size: 18px;
