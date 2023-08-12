@@ -20,8 +20,8 @@ function Home() {
                         <p className="banner_slogan_l3">Conecte-se e comece a desvendar esse mundo!</p>
                         <div className="banner_botoes">
 
-                         <Link className="botao banner_botao_dev" to={"#"}>desenvolvedor</Link>
-                         <Link className="botao banner_botao_cli" to={"#"}>cliente</Link>
+                            <Link className="botao banner_botao_dev" to={"#"}>desenvolvedor</Link>
+                            <Link className="botao banner_botao_cli" to={"#"}>cliente</Link>
                         </div>
                     </div>
                 </section>
@@ -35,10 +35,11 @@ function Home() {
                             <h2>para clientes</h2>
                             <ul>
                                 <li>cadastrar serviços</li>
-                                <li>procurar por desenvolvedores</li>
+                                <Link className="link" to="lista-devs"><li>procurar por desenvolvedores</li></Link>
+
                             </ul>
                             <div>
-                            <Link className="botao clientes_botao_cli" to={"#"}>criar conta</Link>
+                                <Link className="botao clientes_botao_cli" to={"#"}>criar conta</Link>
                             </div>
                         </div>
                     </div>
@@ -48,11 +49,11 @@ function Home() {
                     <div className="devs_texto">
                         <h2>para desenvolvedores</h2>
                         <ul>
-                            <li>encontrar serviços</li>
+                            <Link className="link" to="lista-servicos"><li>encontrar serviços</li></Link>
                             <li>divulgar suas hardskills</li>
                         </ul>
                         <div>
-                        <Link className="botao clientes_botao_devs" to={"#"}>criar conta</Link>
+                            <Link className="botao clientes_botao_devs" to={"#"}>criar conta</Link>
                         </div>
                     </div>
                     <img src={imgMaosDev} alt="" />
@@ -75,10 +76,10 @@ function Home() {
                             <p>Proposta: R$750,00</p>
                         </div>
                     </div>
-                    <a href="#">Ver mais serviços</a>
+                    <Link to="lista-servicos">Ver mais serviços</Link>
                 </section>
             </main>
-      
+
         </div>
     );
 

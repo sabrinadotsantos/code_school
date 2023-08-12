@@ -82,6 +82,10 @@ footer {
     text-decoration: none;
 }
 
+.link:visited{
+    color: #FFFFFF;
+}
+
 .rodape_conteudo_paginas ul {
     font-family: var(--font2);
     font-size: 18px;
