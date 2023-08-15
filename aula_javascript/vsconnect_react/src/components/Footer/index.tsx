@@ -6,23 +6,30 @@ import imgInsta from "../../assets/images/instagram.svg";
 import imgIn from "../../assets/images/linkedin.svg";
 import imgDev from "../../assets/images/dev.png";
 
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
+
+
 
 
 
 function Footer() {
+
+     const location = useLocation();
+
+    
     return (
-        <footer>
+        <footer className={location.pathname == "/" ? "footer_background_image" : "footer_background_color"}> 
             <div className="container rodape">
-                <div className="span_dicas">
+                {
+                    location.pathname == "/" ? <div className="span_dicas">
                     <img src={imgDev} alt="" />
                     <div className="span_dicas_texto">
                         <p>Temos algumas dicas para o seu serviço ou freela ser um sucesso, acesse nossa página de
                             recomendações para saber mais.</p>
-
-                            <Link className="botao botao_dicas" to ={"#"}>mais dicas</Link>
+                        <Link className="botao botao_dicas" to={"#"}>mais dicas</Link>
                     </div>
-                </div>
+                </div> : ""
+                }
                 <div className="rodape_conteudo">
                     <div className="rodape_conteudo_paginas">
                         <h2>Páginas</h2>
