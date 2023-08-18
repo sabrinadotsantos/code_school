@@ -35,6 +35,11 @@ h2 {
 }
 
 
+#main_listaservicos h1 {
+    font-family: var(--font1);
+    font-size: 30px;
+    text-transform: uppercase;
+}
 
 
 
