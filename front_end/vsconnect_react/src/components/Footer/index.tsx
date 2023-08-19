@@ -38,6 +38,7 @@ function Footer() {
                         <Link className="link" to ={"#"}> <li>Login</li></Link>
                         <Link className="link"  to ="/"> <li>Home</li></Link>
                         <Link className="link" to ="lista-servicos"> <li>Listar Serviços</li></Link>
+                        <Link className="link" to ="lista-devs"> <li>Listar Desenvolvedores</li></Link>
                         <Link className="link"  to ={"#"}> <li>Cadastrar Cliente</li></Link>
                         <Link className="link" to ={"#"}> <li>Cadastrar Desenvolvedor</li></Link>
                         </ul>

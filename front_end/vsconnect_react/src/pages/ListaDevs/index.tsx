@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import api from "../../utils/api";
 
 
+
+
 //Hooks são funções JavaScript que permitem que você use recursos do React
 // state é como uma “variável” dentro de um componente.
 // useState é um hook que permite ao componente funcional ter um estado / ele serve para criar essa “variável”.
@@ -104,6 +106,7 @@ function ListaDevs() {
                 devs.map((dev: any, indice: number) => {
                   return <li key={indice}>
                     <CardDev
+                      id={dev.id}
                       foto={dev.user_img}
                       nome={dev.nome}
                       email={dev.email}

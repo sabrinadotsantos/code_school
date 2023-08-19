@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Home from './pages/Home/index';
 import ListaServicos from './pages/ListaServicos';
 import ListaDevs from './pages/ListaDevs/index';
+import Perfil from './pages/PerfilUsuario'
 import Footer from './components/Footer';
 
 //estilizaçào global
@@ -29,8 +30,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route path='/' element={<Home />}/> {/* Indica o caminho do componente e o nome da roda dele | Path = nome do caminho da rota */}
         <Route path='lista-servicos' element={<ListaServicos />}/>
         <Route path='lista-devs' element={<ListaDevs />}/>
-
-
+        <Route path='perfil/:idUsuario' element = {<Perfil/>}/> {/*:idUsuario (parametro da rota) pegas as informaçoes do usuario*/ } 
       </Routes>
       <Footer/>
     </BrowserRouter>

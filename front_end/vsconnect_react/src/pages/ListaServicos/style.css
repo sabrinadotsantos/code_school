@@ -1,50 +1,5 @@
-#sombra {
-    position: fixed;
-    top: 0;
-    right: 110vW;
-    background-color: #000000a6;
-
-    width: 130vw;
-    height: 100vh;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-    backdrop-filter: blur(10px);
-}
-
-.container {
-    max-width: 1400px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-h2 {
-    font-family: var(--font1);
-    font-size: 30px;
-    text-transform: uppercase;
-}
-
-.botao {
-    font-family: var(--font1);
-    color: var(--branco);
-    text-transform: uppercase;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 30%;
-    box-shadow: 15px 15px 30px #00000066;
-}
-
-
-#main_listaservicos h1 {
-    font-family: var(--font1);
-    font-size: 30px;
-    text-transform: uppercase;
-}
-
-
-
 /* MAIN */
-main {
+#main_listaservicos {
     background-image:
         linear-gradient(180deg, #060821 0%, #06082120 25%, #0608218f 80%, #060821 100%),
         url("../../assets/images/background_login.png");
@@ -65,14 +20,14 @@ main {
 .lista_servicos_conteudo {
     width: 100%;
     max-width: 900px;
-    
+
     padding: 50px 0;
     margin-top: 6vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     background: linear-gradient(114.61deg, #ffffff0d 1.08%, #ffffff1e 99.26%);
     box-shadow: 30px 30px 60px #00000080;
     border: 1px solid #ffffffcc;
@@ -81,13 +36,13 @@ main {
     color: var(--branco);
 }
 
-h1 {
+#main_listaservicos h1 {
     font-family: var(--font1);
     font-size: 50px;
     text-align: center;
 }
 
-hr {
+#main_listaservicos hr {
     margin: 20px auto;
     width: 80%;
     height: 4px;
@@ -132,7 +87,7 @@ hr {
     border-radius: 20px;
 
     background: linear-gradient(136deg, #ffffff1a 0%, #ffffff0b 100%);
-    backdrop-filter: blur(15px);    
+    backdrop-filter: blur(15px);
     box-shadow: 30px 30px 60px 0px #00000080;
 
     font-size: 16px;
@@ -177,10 +132,4 @@ hr {
 }
 
 
-/* MEDIAS */
-@media screen and (max-width: 768px) {
 
-
-}
-
-@media screen and (max-width: 500px) {}

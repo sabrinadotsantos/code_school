@@ -24,20 +24,20 @@ body {
     margin: 0 auto;
 }
 
-h1 {
+#main_home h1 {
     position: absolute;
     left: -999em;
     width: 1em;
     overflow: hidden;
 }
 
-h2 {
+#main_home h2 {
     font-family: var(--font1);
     font-size: 30px;
     text-transform: uppercase;
 }
 
-h3 {
+#main_home h3 {
     font-size: 28px;
 }
 
