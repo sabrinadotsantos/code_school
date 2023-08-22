@@ -20,7 +20,7 @@ function ListaServicos() {
             listarServicos();
         }
         setTechsDigitado(event.target.value);
-        
+
     }
 
     function buscarServicoPorTechs(event: any) {
@@ -38,29 +38,29 @@ function ListaServicos() {
         }
 
     }
-   
-
-function listarServicos() {
-    api.get("servicos")
-      .then((response: any) => {
-        setServicos(response.data)
-      })
-
-      .catch((error: any) => {
-        console.log("Error ao realizar uma requisição", error);
-
-      })
-
-  }
 
 
+    function listarServicos() {
+        api.get("servicos")
+            .then((response: any) => {
+                setServicos(response.data)
+            })
+
+            .catch((error: any) => {
+                console.log("Error ao realizar uma requisição", error);
+
+            })
+
+    }
 
 
-useEffect(() => {
-    listarServicos();
-    
 
-}, []);
+
+    useEffect(() => {
+        listarServicos();
+
+
+    }, []);
 
     return (
         <div>
@@ -82,10 +82,11 @@ useEffect(() => {
                         </form>
                         <div className="wrapper_lista">
                             <ul>
-                                { 
+                                {
                                     servicos.map((servicos: any, indice: number) => {
                                         return <li key={indice}>
                                             <CardServicos
+                                                id={servicos.id}
                                                 titulo={servicos.nome}
                                                 valor={servicos.valor}
                                                 descricao={servicos.descricao}

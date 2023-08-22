@@ -1,13 +1,14 @@
 import "./style.css";
 
+import { Link } from "react-router-dom";
 
 function CardServicos(props: any) {
     return (
         <>
             <div className="servico">
                 <div className="topo_servico">
-                    <h3>{ props.titulo}</h3>
-                    <span>{props.valor}</span>
+                < Link to = {"/visualizarServico/" + props.id }> <h2>{props.titulo}</h2></Link>
+                    <span>R$ {props.valor}</span>
                 </div>
                 <p>{props.descricao}</p>
                 <div className="techs">
