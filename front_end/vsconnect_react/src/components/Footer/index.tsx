@@ -40,7 +40,8 @@ function Footer() {
                         <Link className="link" to ="lista-servicos"> <li>Listar Serviços</li></Link>
                         <Link className="link" to ="lista-devs"> <li>Listar Desenvolvedores</li></Link>
                         <Link className="link"  to ={"#"}> <li>Cadastrar Cliente</li></Link>
-                        <Link className="link" to ={"#"}> <li>Cadastrar Desenvolvedor</li></Link>
+                        <Link className="link" to ="cadastro-usuario"> <li>Cadastrar Desenvolvedor</li></Link>
+                        <Link className="link" to ="cadastro-servico"> <li>Cadastrar Servicos</li></Link>
                         </ul>
                     </div>
                     <img src={imgLogo} alt="" />

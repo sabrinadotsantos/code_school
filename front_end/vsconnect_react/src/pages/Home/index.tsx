@@ -35,7 +35,7 @@ function Home() {
                             <h2>para clientes</h2>
                             <ul>
                                 <li>cadastrar serviços</li>
-                                <Link className="link" to="lista-devs"><li>procurar por desenvolvedores</li></Link>
+                                <Link className="link" to="/lista-devs/"><li>procurar por desenvolvedores</li></Link>
 
                             </ul>
                             <div>
@@ -49,7 +49,7 @@ function Home() {
                     <div className="devs_texto">
                         <h2>para desenvolvedores</h2>
                         <ul>
-                            <Link className="link" to="lista-servicos"><li>encontrar serviços</li></Link>
+                            <Link className="link" to="/lista-servicos/"><li>encontrar serviços</li></Link>
                             <li>divulgar suas hardskills</li>
                         </ul>
                         <div>
@@ -76,7 +76,7 @@ function Home() {
                             <p>Proposta: R$750,00</p>
                         </div>
                     </div>
-                    <Link to="lista-servicos">Ver mais serviços</Link>
+                    <Link to="/lista-servicos/">Ver mais serviços</Link>
                 </section>
             </main>
 

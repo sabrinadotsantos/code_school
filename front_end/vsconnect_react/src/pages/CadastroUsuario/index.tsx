@@ -59,9 +59,10 @@ function CadastroUsuario() {
         formData.append("uf", uf);
         formData.append("hardSkills", JSON.stringify( skillsSelecionadas)); 
         // stringfy = pega lista que transfoma em string ex. [] > "[]"
-
+        console.log(formData);
+        
         //post cadastrar
-        api.post("users/", formData)
+        api.post("users", formData)
             .then((response: any) => {
                 console.log(response);
                 alert("Usuário cadastrado com sucesso :)");
