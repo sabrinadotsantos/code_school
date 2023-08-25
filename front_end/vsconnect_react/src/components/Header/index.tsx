@@ -3,7 +3,7 @@ import "./style.css"
 import imgLogo from "../../assets/images/logo.svg";
 import { Link } from "react-router-dom"
 
-function Header() {
+function Header(props: any) {
     function mostrarMenu() {
         // Mostrar menu no layout responsivo
         let menu: any = document.getElementById("menu_links"); // Obtém o elemento do menu pelo ID
@@ -43,7 +43,7 @@ function Header() {
                             <Link to="/cadastro-usuario">cadastro</Link>
                         </div>
 
-                        <Link className="header_icone_login" to={"#"}></Link>
+                        <Link className="header_icone_login" to="/"></Link>
 
                         <Link className="header_icone_login" to={"#"}>
 
@@ -55,7 +55,17 @@ function Header() {
                             </svg>
 
                         </Link>
-                        <Link className="header_botao_login" to={"#"}>login</Link>
+
+                        {   //if ternario
+                            //se sim
+                            props.usuario.logado ? 
+                            //executa        
+                            <span>Olá, {props.usuario.nomeUsuario}</span> :
+                            //senao executa: 
+                            <Link className="header_botao_login" to="/login">login</Link> 
+                        }
+
+                        
                     </nav>
                 </div>
             </header>

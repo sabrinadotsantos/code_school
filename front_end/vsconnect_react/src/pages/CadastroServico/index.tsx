@@ -53,6 +53,7 @@ function CadastroServico() {
 
                 //Atualiza o valor do state skillsSelecionadas
                 setTechsSelecionadas(novaListaSkillsSelecionadas);
+                setFormServico({...formServico, techs: novaListaSkillsSelecionadas});
             }
         }
     }
@@ -64,6 +65,7 @@ function CadastroServico() {
 
         //Atualiza o valor do state skillsSelecionadas, com o valor da variavel novaListaSkillsSelecionadas 
         setTechsSelecionadas(novaListaSkillsSelecionadas);
+        setFormServico({...formServico, techs: novaListaSkillsSelecionadas});
     };
 
 
@@ -71,7 +73,7 @@ function CadastroServico() {
     function cadastrarServico(event: any) {
         event.preventDefault();
 
-        api.post("servicos/", formServico)
+        api.post("servicos", formServico)
             .then((response: any) => {
                 console.log(response);
                 alert("Usuário cadastrado com sucesso :)");

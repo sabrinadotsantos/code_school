@@ -99,6 +99,11 @@ header nav a {
     font-family: var(--font2);
 }
 
+header nav span {
+    color: var(--branco);
+    font-size: 20px;
+}
+
 .header_botao_login {
     border: 4px solid var(--rosa);
     padding: 4px 30px;

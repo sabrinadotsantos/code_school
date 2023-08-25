@@ -7,13 +7,13 @@ function CardServicos(props: any) {
         <>
             <div className="servico">
                 <div className="topo_servico">
-                < Link to = {"/visualizarServico/" + props.id }> <h2>{props.titulo}</h2></Link>
+                < Link to = {"/visualizarServico/" + props.id }> <h2>{props.nome}</h2></Link>
                     <span>R$ {props.valor}</span>
                 </div>
                 <p>{props.descricao}</p>
                 <div className="techs">
                     {
-                        props.listaTechs.map((tech: string, indice: number) => {
+                        props.techs.map((tech: string, indice: number) => {
 
                             return <span key={indice}>{tech}</span>
 
