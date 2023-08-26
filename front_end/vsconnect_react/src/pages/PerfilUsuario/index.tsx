@@ -1,6 +1,7 @@
 //rotas
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate, Navigate } from "react-router-dom";
+import secureLocalStorage from "react-secure-storage";
 import api from "../../utils/api";
 
 
@@ -13,6 +14,7 @@ import "./style.css";
 function PerfilUsuario() {
 
     const { idUsuario } = useParams(); // acessando o id usuario
+    const navigate = useNavigate();
 
     // dados dos usuario, retornar na api 
 
@@ -37,8 +39,17 @@ function PerfilUsuario() {
                 setUf(response.data.uf);
                 setListaSkills(response.data.hardSkills);
             })
-            .catch ((error: any) => console.log(error));
-            
+            .catch((error: any) => console.log(error));
+
+    }
+
+    function deslogar() {
+        console.log(secureLocalStorage.getItem("user"));
+
+        secureLocalStorage.removeItem("user")
+        navigate("/");
+        navigate(0);
+
     }
 
     useEffect(() => {
@@ -90,7 +101,7 @@ function PerfilUsuario() {
                         </div>
                     </div>
                     <footer>
-                        <Link to={"/"}>
+                        <Link to={"/login"} onClick={deslogar}>
                             <svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512">{/*  Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. */}
                                 <path
