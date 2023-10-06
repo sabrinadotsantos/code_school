@@ -8,6 +8,10 @@ public class Main {
         Scanner leitor = new Scanner(System.in);
 
 
+        String opcao;
 
+        do {
+
+        }while (!opcao.equals("0");
     }
 }
