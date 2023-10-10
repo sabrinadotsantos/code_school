@@ -68,7 +68,7 @@ public class Main {
                                 }
 
                                 System.out.println(("Digite o logradouro"));
-                                novoEndPf.logradouro = leitor.next();
+                                novoEndPf.logradouro = leitor.nextLine();
 
 
                                 System.out.println("Digite o numero");
