@@ -20,7 +20,6 @@ public class PessoaJuridica extends Pessoa {
             return rendimento * .09f;
         }
 
-
     }
 
 }

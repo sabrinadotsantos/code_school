@@ -72,7 +72,7 @@ public class Main {
 
 
                                 System.out.println("Digite o numero");
-                                novoEndPf.numero = leitor.nextInt();
+                                novoEndPf.numero = Integer.parseInt(leitor.nextLine());
 
                                 System.out.println("É endereço comercial? S/N");
 
@@ -145,17 +145,16 @@ public class Main {
                                 novaPj.cnpj = leitor.nextLine();
 
                                 System.out.println("Digite o rendimento");
-                                novaPj.rendimento = leitor.nextFloat();
+                                novaPj.rendimento = Float.parseFloat(leitor.nextLine());
 
                                 System.out.println(("Digite o logradouro"));
-                                novoEndPj.logradouro = leitor.next();
+                                novoEndPj.logradouro = leitor.nextLine();
 
 
                                 System.out.println("Digite o numero");
-                                novoEndPj.numero = leitor.nextInt();
+                                novoEndPj.numero = Integer.parseInt(leitor.nextLine());
 
                                 System.out.println("É endereço comercial? S/N");
-
                                 String endCom = leitor.next();
 
                                 if (endCom.equals("S") || endCom.equals("s")) {
@@ -169,7 +168,6 @@ public class Main {
                                 listaPj.add(novaPj);
 
                                 System.out.println("Cadastro realizado com sucesso! :)");
-
                                 break;
                             case "2":
                                 //verificar se a lista esta vazia - validação
@@ -196,7 +194,7 @@ public class Main {
                                 break;
 
                             default:
-                                System.out.println("default");
+
                                 break;
                         }
 
