@@ -1,6 +1,6 @@
 CREATE DATABASE bd_vsconnect;
 
-/*USA O BANCO DE DADOS SELECIONADO*/
+/*USA O BANCO DE DADOS SELECIONADO - COMANDOS DDL*/
 USE bd_vsconnect;
 
 CREATE TABLE tb_techs(
@@ -9,10 +9,10 @@ CREATE TABLE tb_techs(
     PRIMARY KEY(id_tech)
 );
 
-/*DROP TABLE tb_usuarios;*/
+DROP TABLE tb_techs;
 
 CREATE TABLE tb_usuarios(
-	id_usuario BINARY(26) NOT NULL,
+	id_usuario BINARY(16) NOT NULL,
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
@@ -30,13 +30,13 @@ CREATE TABLE tb_dev_tech(
 );
 
 CREATE TABLE tb_servicos(
-	id_servico BINARY(26) NOT NULL,
+	id_servico BINARY(16) NOT NULL,
     titulo VARCHAR(255) NOT NULL,
     descricao TEXT NOT NULL,
     proposta DECIMAL(10,2)NOT NULL,
-    status_serico VARCHAR(50) NOT NULL,
+    status_servico VARCHAR(50) NOT NULL,
     id_cliente BINARY(16) NOT NULL,
-    id_deV BINARY (16),
+    id_dev BINARY (16),
     PRIMARY KEY(id_servico),
     FOREIGN KEY(id_cliente) REFERENCES tb_usuarios(id_usuario),
     FOREIGN KEY(id_dev) REFERENCES tb_usuarios(id_usuario)
