@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.scheduling.support.SimpleTriggerContext;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -28,4 +29,6 @@ public class UsuarioModel implements Serializable {
     private String endereco;
     private String cep;
     private String tipo_usuario;
+
+    private String url_img;
 }
