@@ -30,23 +30,23 @@ public class UsuarioController {
     FileUploadService fileUploadService;
 
     @GetMapping
-    public ResponseEntity<List<UsuarioModel>> listarUsuarios(){
+    public ResponseEntity<List<UsuarioModel>> listarUsuarios() {
         return ResponseEntity.status(HttpStatus.OK).body(usuarioRepository.findAll());
     }
 
     @GetMapping("/{idUsuario}")
-    public  ResponseEntity<Object> buscarUsuario(@PathVariable(value = "idUsuario") UUID id){
+    public ResponseEntity<Object> buscarUsuario(@PathVariable(value = "idUsuario") UUID id) {
         Optional<UsuarioModel> usuarioBuscado = usuarioRepository.findById(id);
 
         if (usuarioBuscado.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario não encontrado");
         }
-            return ResponseEntity.status(HttpStatus.OK).body(usuarioBuscado.get());
+        return ResponseEntity.status(HttpStatus.OK).body(usuarioBuscado.get());
     }
 
     @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    public ResponseEntity<Object> criarUsuario(@ModelAttribute @Valid UsuarioDto usuarioDto){
-        if(usuarioRepository.findByEmail(usuarioDto.email()) != null ){
+    public ResponseEntity<Object> criarUsuario(@ModelAttribute @Valid UsuarioDto usuarioDto) {
+        if (usuarioRepository.findByEmail(usuarioDto.email()) != null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Email já cadastrado!");
         }
 
@@ -55,9 +55,9 @@ public class UsuarioController {
 
         String urlImagem;
 
-        try{
+        try {
             urlImagem = fileUploadService.fazerUpload(usuarioDto.imagem());
-        }catch (IOException e ){
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
@@ -66,24 +66,35 @@ public class UsuarioController {
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioRepository.save(novoUsuario));
     }
 
-    @PutMapping("/{idUsuario}")
-    public ResponseEntity<Object> editarUsuario(@PathVariable(value = "idUsuario") UUID id, @RequestBody @Valid UsuarioDto usuarioDto){
+    @PutMapping(value = "/{idUsuario}", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    public ResponseEntity<Object> editarUsuario(@PathVariable(value = "idUsuario") UUID id, @ModelAttribute @Valid UsuarioDto usuarioDto) {
         Optional<UsuarioModel> usuarioBuscado = usuarioRepository.findById(id);
 
-        if (usuarioBuscado.isEmpty()){
-            return  ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario nao encontrado");
+        if (usuarioBuscado.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario nao encontrado");
         }
-            UsuarioModel usuarioBd = usuarioBuscado.get();
-            BeanUtils.copyProperties(usuarioDto, usuarioBd);
+        UsuarioModel usuarioBd = usuarioBuscado.get();
+        BeanUtils.copyProperties(usuarioDto, usuarioBd);
 
-            return ResponseEntity.status(HttpStatus.OK).body(usuarioRepository.save(usuarioBd));
+        String urlImagem;
+
+        try {
+            urlImagem = fileUploadService.fazerUpload(usuarioDto.imagem());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        usuarioBd.setUrl_img(urlImagem);
+
+        return ResponseEntity.status(HttpStatus.OK).body(usuarioRepository.save(usuarioBd));
+
     }
 
     @DeleteMapping("/{idUsuario}")
-    public ResponseEntity<Object> deletarUsuario(@PathVariable(value = "idUsuario") UUID id){
+    public ResponseEntity<Object> deletarUsuario(@PathVariable(value = "idUsuario") UUID id) {
         Optional<UsuarioModel> usuarioBuscado = usuarioRepository.findById(id);
 
-        if (usuarioBuscado.isEmpty()){
+        if (usuarioBuscado.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario não encontrado");
         }
 
