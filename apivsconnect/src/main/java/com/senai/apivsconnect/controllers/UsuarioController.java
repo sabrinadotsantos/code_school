@@ -3,13 +3,16 @@ package com.senai.apivsconnect.controllers;
 import com.senai.apivsconnect.dtos.UsuarioDto;
 import com.senai.apivsconnect.models.UsuarioModel;
 import com.senai.apivsconnect.repositories.UsuarioRepository;
+import com.senai.apivsconnect.services.FileUploadService;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,6 +25,9 @@ public class UsuarioController {
 
     @Autowired
     UsuarioRepository usuarioRepository;
+
+    @Autowired
+    FileUploadService fileUploadService;
 
     @GetMapping
     public ResponseEntity<List<UsuarioModel>> listarUsuarios(){
@@ -38,14 +44,24 @@ public class UsuarioController {
             return ResponseEntity.status(HttpStatus.OK).body(usuarioBuscado.get());
     }
 
-    @PostMapping
-    public ResponseEntity<Object> criarUsuario(@RequestBody @Valid UsuarioDto usuarioDto){
+    @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    public ResponseEntity<Object> criarUsuario(@ModelAttribute @Valid UsuarioDto usuarioDto){
         if(usuarioRepository.findByEmail(usuarioDto.email()) != null ){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Email já cadastrado!");
         }
 
         UsuarioModel novoUsuario = new UsuarioModel();
         BeanUtils.copyProperties(usuarioDto, novoUsuario);
+
+        String urlImagem;
+
+        try{
+            urlImagem = fileUploadService.fazerUpload(usuarioDto.imagem());
+        }catch (IOException e ){
+            throw new RuntimeException(e);
+        }
+
+        novoUsuario.setUrl_img(urlImagem);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioRepository.save(novoUsuario));
     }
