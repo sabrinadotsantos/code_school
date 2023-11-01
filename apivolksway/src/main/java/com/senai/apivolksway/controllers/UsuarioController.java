@@ -46,7 +46,7 @@ public class UsuarioController {
     }
 
     //POST
-    @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    @PostMapping
     public ResponseEntity<Object> criarUsuario(@ModelAttribute @Valid UsuarioDto usuarioDto) {
         if (usuarioRepository.findByEmail(usuarioDto.email()) != null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Email já cadastrado!");
@@ -55,21 +55,12 @@ public class UsuarioController {
         UsuarioModel novoUsuario = new UsuarioModel();
         BeanUtils.copyProperties(usuarioDto, novoUsuario);
 
-//        String urlImagem;
-//
-//        try {
-//            urlImagem = fileUploadService.fazerUpload(usuarioDto.imagem());
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//        novoUsuario.setUrl_img(urlImagem);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioRepository.save(novoUsuario));
     }
 
     //PUT
-    @PutMapping(value = "/{idUsuario}", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    @PutMapping(value = "/{idUsuario}")
     public ResponseEntity<Object> editarUsuario(@PathVariable(value = "idUsuario") UUID id, @ModelAttribute @Valid UsuarioDto usuarioDto) {
         Optional<UsuarioModel> usuarioBuscado = usuarioRepository.findById(id);
 
@@ -79,15 +70,6 @@ public class UsuarioController {
         UsuarioModel usuarioBd = usuarioBuscado.get();
         BeanUtils.copyProperties(usuarioDto, usuarioBd);
 
-//        String urlImagem;
-//
-//        try {
-//            urlImagem = fileUploadService.fazerUpload(usuarioDto.imagem());
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//        usuarioBd.setUrl_img(urlImagem);
 
         return ResponseEntity.status(HttpStatus.OK).body(usuarioRepository.save(usuarioBd));
 

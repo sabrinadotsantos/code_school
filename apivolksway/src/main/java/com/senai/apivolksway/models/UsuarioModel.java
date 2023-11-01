@@ -24,9 +24,6 @@ public class UsuarioModel implements Serializable {
     @Column(name = "id_usuario", nullable = false)
 
     private UUID id;
-
-    public String nome;
-
     private String telefone;
 
     protected String email;
@@ -39,5 +36,11 @@ public class UsuarioModel implements Serializable {
 
     public String cpf;
 
-    public Integer tipoUsaurio;
+    public Integer tipoUsuario;
+    public String nome;
+
+    @ManyToOne
+    @JoinColumn(name = "id_empresa", referencedColumnName = "id_usuario")
+    private UsuarioModel empresa;
+
 }

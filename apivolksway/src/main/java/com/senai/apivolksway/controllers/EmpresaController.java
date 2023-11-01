@@ -1,17 +1,17 @@
 package com.senai.apivolksway.controllers;
 
 
+import com.senai.apivolksway.dtos.EmpresaDto;
 import com.senai.apivolksway.models.EmpresaModel;
 import com.senai.apivolksway.repositories.EmpresaRepository;
-import com.senai.apivolksway.repositories.UsuarioRepository;
+import jakarta.validation.Valid;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -20,17 +20,55 @@ import java.util.UUID;
 public class EmpresaController {
 
     @Autowired
-    UsuarioRepository usuarioRepository;
-    @Autowired
-    private EmpresaRepository empresaRepository;
+    EmpresaRepository empresaRepository;
 
-    //Get
+
     @GetMapping
+    public ResponseEntity<List<EmpresaModel>> listarEmpresas(){
+        return  ResponseEntity.status(HttpStatus.OK).body(empresaRepository.findAll());
+    }
+
+    //Get por ID
+    @GetMapping("/{idEmpresa}")
     public ResponseEntity<Object> buscarEmpresa(@PathVariable(value = "idEmpresa")UUID id){
         Optional<EmpresaModel> empresaBuscada = empresaRepository.findById(id);
 
         if (empresaBuscada.isEmpty()){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario não encontrado");
         }
+
+        return ResponseEntity.status(HttpStatus.OK).body(empresaBuscada.get());
     }
+
+    //Post
+
+    @PostMapping
+    public ResponseEntity<Object> criarEmpresa(@ModelAttribute @Valid EmpresaDto empresaDto){
+        if (empresaRepository.findByCnpj(empresaDto.cnpj()) != null){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("CNPJ já cadastrado!");
+        }
+
+        EmpresaModel novaEmpresa = new EmpresaModel();
+        BeanUtils.copyProperties(empresaDto, novaEmpresa);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(empresaRepository.save(novaEmpresa));
+    }
+
+    //Delete
+
+    @DeleteMapping("/{idEmpresa}")
+    public ResponseEntity<Object> deletarEmpresa(@PathVariable(value = "idEmpresa") UUID id){
+        Optional<EmpresaModel> empresaBuscada = empresaRepository.findById(id);
+
+        if(empresaBuscada.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario não encontrado");
+        }
+
+        empresaRepository.delete(empresaBuscada.get());
+        return ResponseEntity.status(HttpStatus.OK).body("Empresa deletada com sucesso");
+    }
+
+
+
+
 }

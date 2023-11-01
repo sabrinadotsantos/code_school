@@ -7,6 +7,7 @@ public record EmpresaDto(
 
         String cidade,
 
+        @NotBlank
         String cnpj
 
 
