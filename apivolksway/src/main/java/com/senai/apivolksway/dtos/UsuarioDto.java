@@ -10,13 +10,14 @@ import java.util.UUID;
 
 public record UsuarioDto(
 
+        @NotNull UUID id_empresa,
         String telefone,
         @NotBlank @Email(message = "O email deve estar no formato válido.") String email,
 
         @NotBlank String senha,
 
         @NotBlank
-        LocalDate dataNascimento,
+        LocalDate data_nascimento,
 
         @NotBlank
         String cidade,
@@ -25,11 +26,11 @@ public record UsuarioDto(
         String cpf,
 
         @NotBlank
-        Integer tipoUsuario,
+        Integer tipo_usuario,
 
-        @NotBlank String nome,
+        @NotBlank String nome
 
-        @NotNull UUID id_servico
+
 
 
 

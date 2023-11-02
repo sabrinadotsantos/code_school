@@ -25,9 +25,9 @@ public class VeiculoModel implements Serializable {
 
     private UUID id;
 
-    private String codigoChassi;
+    private String codigo_chassi;
 
     private String marca;
 
-    public String placa;
+    private String placa;
 }

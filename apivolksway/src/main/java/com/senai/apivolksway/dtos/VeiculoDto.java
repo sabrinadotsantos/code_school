@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 public record VeiculoDto(
 
         @NotBlank
-        String codigoChassi,
+        String codigo_chassi,
         @NotBlank
         String marca,
         @NotBlank

@@ -22,8 +22,10 @@ public class EmpresaModel implements Serializable {
     @Column(name = "id_empresa", nullable = false)
     private UUID id;
 
-    private String razaoSocial;
+    private String razao_social;
     private String cidade;
 
     private String cnpj;
+
+
 }

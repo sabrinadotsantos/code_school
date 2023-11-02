@@ -29,11 +29,14 @@ public class UsuarioController {
     @Autowired
     FileUploadService fileUploadService;
 
+
+    //Get
     @GetMapping
     public ResponseEntity<List<UsuarioModel>> listarUsuarios() {
         return ResponseEntity.status(HttpStatus.OK).body(usuarioRepository.findAll());
     }
 
+    //Get por ID
     @GetMapping("/{idUsuario}")
     public ResponseEntity<Object> buscarUsuario(@PathVariable(value = "idUsuario") UUID id) {
         Optional<UsuarioModel> usuarioBuscado = usuarioRepository.findById(id);
@@ -44,6 +47,7 @@ public class UsuarioController {
         return ResponseEntity.status(HttpStatus.OK).body(usuarioBuscado.get());
     }
 
+    //Post
     @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<Object> criarUsuario(@ModelAttribute @Valid UsuarioDto usuarioDto) {
         if (usuarioRepository.findByEmail(usuarioDto.email()) != null) {
@@ -66,6 +70,7 @@ public class UsuarioController {
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioRepository.save(novoUsuario));
     }
 
+    //Put
     @PutMapping(value = "/{idUsuario}", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<Object> editarUsuario(@PathVariable(value = "idUsuario") UUID id, @ModelAttribute @Valid UsuarioDto usuarioDto) {
         Optional<UsuarioModel> usuarioBuscado = usuarioRepository.findById(id);
@@ -90,6 +95,7 @@ public class UsuarioController {
 
     }
 
+    //Delete
     @DeleteMapping("/{idUsuario}")
     public ResponseEntity<Object> deletarUsuario(@PathVariable(value = "idUsuario") UUID id) {
         Optional<UsuarioModel> usuarioBuscado = usuarioRepository.findById(id);
