@@ -62,7 +62,7 @@ public class ChecklistController {
             throw new RuntimeException(e);
         }
 
-        novoChecklist.setUrl_img(urlImagem);
+//        novoChecklist.setUrl_img(urlImagem);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(checklistRepository.save(novoChecklist));
     }
