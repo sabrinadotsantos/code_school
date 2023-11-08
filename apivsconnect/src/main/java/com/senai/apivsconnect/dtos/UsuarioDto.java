@@ -12,7 +12,4 @@ public record UsuarioDto(
         String cep,
         String tipo_usuario,
         MultipartFile imagem
-) {
-
-
-}
+) { }
