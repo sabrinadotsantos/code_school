@@ -1,8 +1,6 @@
 package com.senai.apivsconnect.services;
 
-
 import com.auth0.jwt.JWT;
-import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.senai.apivsconnect.models.UsuarioModel;
@@ -19,24 +17,24 @@ public class TokenService {
     private String secret;
 
 
-    public String gerarToken(UsuarioModel usuario) {
 
-        try {
-            Algorithm algoritimo = Algorithm.HMAC256(secret); // algoritmo contém a assinaturaF
+    public String gerarToken(UsuarioModel usuario){
+        try{
+            Algorithm algoritimo = Algorithm.HMAC256(secret);
             String token = JWT.create()
                     .withIssuer("api-vsconnect")
                     .withSubject(usuario.getEmail())
-                    .withExpiresAt(gerarValidadeToken()) //tempo de expiração do token
+                    .withExpiresAt(gerarValidadeToken())
                     .sign(algoritimo);
             return token;
 
-
-        } catch (JWTCreationException exception) {
-            throw new RuntimeException("Erro ", exception);
+        }catch(JWTCreationException exception){
+            throw new RuntimeException("Erro", exception);
         }
     }
+
     public String validarToken(String token){
-        try {
+        try{
             Algorithm algoritimo = Algorithm.HMAC256(secret);
             return JWT.require(algoritimo)
                     .withIssuer("api-vsconnect")
@@ -44,14 +42,15 @@ public class TokenService {
                     .verify(token)
                     .getSubject();
 
-        }catch (JWTCreationException exception){
+        }catch(JWTCreationException exception){
             throw new RuntimeException(exception);
-
         }
     }
 
-    private Instant gerarValidadeToken() {
-        return LocalDateTime.now().plusHours(2).toInstant(ZoneOffset.of("-3"));
-    }
 
+
+
+    private Instant gerarValidadeToken(){
+        return LocalDateTime.now().plusHours(2).toInstant(ZoneOffset.of("-03:00"));
+    }
 }
