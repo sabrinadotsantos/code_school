@@ -37,10 +37,16 @@ public class TokenService {
     }
     public String validarToken(String token){
         try {
-            Algorithm algoritimo = Algorithm.HMAC256(secret); // algoritmo contém a assinaturaF
+            Algorithm algoritimo = Algorithm.HMAC256(secret);
+            return JWT.require(algoritimo)
+                    .withIssuer("api-vsconnect")
+                    .build()
+                    .verify(token)
+                    .getSubject();
 
         }catch (JWTCreationException exception){
             throw new RuntimeException(exception);
+
         }
     }
 
