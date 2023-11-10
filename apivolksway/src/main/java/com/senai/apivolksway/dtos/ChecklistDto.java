@@ -19,6 +19,6 @@ public record ChecklistDto(
 
         @NotBlank Boolean oleo,
 
-        @NotBlank MultipartFile imagem
+        MultipartFile imagem
         ) {
 }
