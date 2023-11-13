@@ -20,7 +20,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
-@RequestMapping(value = "/checklist", produces = {"application/json"})
+@RequestMapping(value = "/checklists", produces = {"application/json"})
 public class ChecklistController {
     @Autowired
     ChecklistRepository checklistRepository;
@@ -48,7 +48,7 @@ public class ChecklistController {
     //Post
     @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<Object> criarChecklist(@ModelAttribute @Valid ChecklistDto checklistDto) {
-        if (checklistRepository.findByFreio(checklistDto.freio().toString()) != null) {
+        if (checklistRepository.findByFreio(Boolean.valueOf(checklistDto.freio().toString())) != null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Checklist já cadastrado!");
         }
 

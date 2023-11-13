@@ -25,6 +25,10 @@ public class VeiculoModel implements Serializable {
 
     private UUID id;
 
+    @ManyToOne
+    @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
+    private UsuarioModel usuario;
+
     private String codigo_chassi;
 
     private String marca;

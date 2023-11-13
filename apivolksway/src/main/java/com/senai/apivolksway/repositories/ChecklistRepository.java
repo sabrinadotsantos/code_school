@@ -8,5 +8,5 @@ import java.util.UUID;
 
 @Repository
 public interface ChecklistRepository extends JpaRepository<ChecklistModel, UUID> {
-    ChecklistModel findByFreio(String freio);
+    ChecklistModel findByFreio(Boolean freio);
 }

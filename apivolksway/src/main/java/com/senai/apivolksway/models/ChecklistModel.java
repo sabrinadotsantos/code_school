@@ -19,7 +19,7 @@ public class ChecklistModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_checklist", nullable = false)
+    @Column(name = "id_checklists", nullable = false)
     private UUID id;
 
     @ManyToOne

@@ -61,7 +61,7 @@ public class EmpresaController {
         Optional<EmpresaModel> empresaBuscada = empresaRepository.findById(id);
 
         if(empresaBuscada.isEmpty()){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario não encontrado");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Empresa não encontrada");
         }
 
         empresaRepository.delete(empresaBuscada.get());
