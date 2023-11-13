@@ -46,11 +46,11 @@ CREATE TABLE tb_veiculos(
 CREATE TABLE tb_checklists(
 	id_checklist BINARY(16) NOT NULL,
     id_veiculo BINARY(16) NOT NULL,
-	freio BIT(1) NOT NULL,
-    combustivel BIT(1) NOT NULL,
-    oleo BIT(1) NOT NULL,
+	freio BIT NOT NULL,
+    combustivel BIT NOT NULL,
+    oleo BIT NOT NULL,
     foto_pneu VARCHAR(255) NOT NULL,
-    ar_condicionado BIT(1) NOT NULL,
+    ar_condicionado BIT NOT NULL,
     PRIMARY KEY(id_checklist),
     FOREIGN KEY(id_veiculo) REFERENCES tb_veiculos(id_veiculo)
 );
@@ -67,7 +67,7 @@ img VARCHAR(255) NOT NULL,
 publico_alvo VARCHAR(30) NOT NULL,
 data_limite DATE NOT NULL,
 preco FLOAT(10, 2),
-importancia BIT(1) NOT NULL,
+importancia BIT NOT NULL,
 nome_tipo_propaganda VARCHAR(20) NOT NULL,
 PRIMARY KEY(id_propaganda),
 FOREIGN KEY(id_usuario) REFERENCES tb_usuarios(id_usuario)
@@ -77,7 +77,7 @@ CREATE TABLE tb_interesses(
 	id_interesse BINARY(16) NOT NULL,
     id_propaganda BINARY(16) NOT NULL,
     id_usuario BINARY(16) NOT NULL,
-    meio_contato_email BIT(1),
+    email BIT, -- meio_contato_email
     PRIMARY KEY(id_interesse),
     FOREIGN KEY(id_propaganda) REFERENCES tb_propagandas(id_propaganda),
     FOREIGN KEY(id_usuario) REFERENCES tb_usuarios(id_usuario)
