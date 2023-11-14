@@ -1,4 +1,4 @@
-package com.senai.apivsconnect.controllers;
+package com.senai.apivolksway.controllers;
 
 import com.senai.apivolksway.dtos.LoginDto;
 import com.senai.apivolksway.dtos.TokenDto;

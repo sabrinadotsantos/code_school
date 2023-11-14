@@ -5,9 +5,9 @@ public enum TipoModel {
     ADMIN("admin"),
     MOTORISTA("motorista"),
 
-    ADMFROTA ("admFrota"),
+    ADMFROTA("admFrota"),
 
-    PROPRIETARIO ("proprietario");
+    PROPRIETARIO("proprietario");
 
     private String tipo;
 

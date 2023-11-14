@@ -1,5 +1,6 @@
 package com.senai.apivolksway.dtos;
 
+import com.senai.apivolksway.models.TipoModel;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -17,7 +18,7 @@ public record UsuarioDto(
         @NotBlank String senha,
 
         @NotBlank
-        LocalDate data_nascimento,
+        String data_nascimento,
 
         @NotBlank
         String cidade,
@@ -26,7 +27,7 @@ public record UsuarioDto(
         String cpf,
 
         @NotBlank
-        Integer tipo_usuario,
+        TipoModel tipo_usuario,
 
         @NotBlank String nome
 

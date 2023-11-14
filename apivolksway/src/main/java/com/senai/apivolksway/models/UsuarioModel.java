@@ -36,7 +36,7 @@ public class UsuarioModel implements Serializable, UserDetails {
     private String telefone;
 
     protected String email;
-    @JsonIgnore
+
     private String senha;
 
     public String data_nascimento;
@@ -45,7 +45,7 @@ public class UsuarioModel implements Serializable, UserDetails {
 
     public String cpf;
 
-    public TipoModel tipo_usuario;
+    private TipoModel tipo_usuario;
     public String nome;
 
 
