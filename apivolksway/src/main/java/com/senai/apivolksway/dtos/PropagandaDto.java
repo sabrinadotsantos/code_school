@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 import java.util.BitSet;
+import java.util.Date;
 import java.util.UUID;
 
 public record PropagandaDto(
@@ -13,7 +14,7 @@ public record PropagandaDto(
     String descricao,
      String img,
      String  publico_alvo,
-     LocalDate data_limite,
+     Date data_limite,
      Float  preco,
     BitSet importancia,
      String  nome_tipo_propaganda

@@ -43,7 +43,7 @@ public class EmpresaController {
     //Post
 
     @PostMapping
-    public ResponseEntity<Object> criarEmpresa(@ModelAttribute @Valid EmpresaDto empresaDto){
+    public ResponseEntity<Object> criarEmpresa(@RequestBody @Valid EmpresaDto empresaDto){
         if (empresaRepository.findByCnpj(empresaDto.cnpj()) != null){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("CNPJ já cadastrado!");
         }

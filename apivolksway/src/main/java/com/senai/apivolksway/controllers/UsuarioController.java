@@ -3,6 +3,7 @@ package com.senai.apivolksway.controllers;
 
 import com.senai.apivolksway.dtos.UsuarioDto;
 import com.senai.apivolksway.models.UsuarioModel;
+import com.senai.apivolksway.repositories.EmpresaRepository;
 import com.senai.apivolksway.repositories.UsuarioRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
@@ -23,6 +24,9 @@ public class UsuarioController {
 
     @Autowired
     UsuarioRepository usuarioRepository;
+
+    @Autowired
+    EmpresaRepository empresaRepository;
 
     //Get
     @GetMapping
@@ -46,14 +50,26 @@ public class UsuarioController {
     }
 
     //POST
+
     @PostMapping
-    public ResponseEntity<Object> criarUsuario(@ModelAttribute @Valid UsuarioDto usuarioDto) {
+    public ResponseEntity<Object> criarUsuario(@RequestBody @Valid UsuarioDto usuarioDto) {
         if (usuarioRepository.findByEmail(usuarioDto.email()) != null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Email já cadastrado!");
         }
 
         UsuarioModel novoUsuario = new UsuarioModel();
         BeanUtils.copyProperties(usuarioDto, novoUsuario);
+
+
+
+        var empresa = empresaRepository.findById(usuarioDto.id_empresa());
+
+        //se existir id da empresa
+        if (empresa.isPresent()) {
+            novoUsuario.setEmpresa(empresa.get());
+        } else {
+            ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Empresa nao encontrada");
+        }
 
         //Criptografa a senha
         String senhaCript = new BCryptPasswordEncoder().encode(usuarioDto.senha());

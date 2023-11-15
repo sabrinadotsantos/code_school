@@ -9,6 +9,7 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.BitSet;
+import java.util.Date;
 import java.util.UUID;
 
 @Getter
@@ -34,7 +35,7 @@ public class PropagandaModel implements Serializable {
     public  String descricao;
     public  String img;
     public  String  publico_alvo;
-    public LocalDate data_limite;
+    public Date data_limite;
     public  Float  preco;
     public BitSet importancia;
     public  String  nome_tipo_propaganda;
