@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/Theme.CalculadoraConversao.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/Theme.CalculadoraConversao.PopupOverlay"
+                android:layout_height="?attr/actionBarSize"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/constraintLayout">
+
+        <TextView
+                android:text="@string/titulo"
+                android:layout_width="198dp"
+                android:layout_height="41dp"
+                android:id="@+id/titulo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center" android:textSize="34sp" android:textColor="#090909"
+                android:layout_marginTop="100dp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/inputValor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/titulo"
+                android:layout_marginTop="72dp" app:layout_constraintHorizontal_bias="0.497"/>
+        <Button
+                android:text="Converter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/botaoConverter"
+                app:cornerRadius="100sp" android:textSize="24sp" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/grupoEscolha" android:textColor="#0E0D0D"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/exibirResultado"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"
+                app:layout_constraintHorizontal_bias="0.498" app:layout_constraintTop_toBottomOf="@+id/inputValor"/>
+        <RadioGroup
+                android:layout_width="193dp"
+                android:layout_height="142dp"
+                android:id="@+id/grupoEscolha"
+                android:layout_marginTop="64dp"
+                app:layout_constraintTop_toBottomOf="@+id/exibirResultado"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+            <RadioButton
+                    android:text="EUR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/rdEur"/>
+            <RadioButton
+                    android:text="USD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/rdUsd"/>
+            <RadioButton
+                    android:text="LBR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/rdLbr"/>
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
