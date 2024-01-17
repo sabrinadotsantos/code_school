@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    //paleta de cores do VsConnect
+    <color name="rosa">#C12D6D</color>
+    <color name="azul_turquesa">#0C7EAE</color>
+    <color name="azul_marinho">#060821</color>
+    <color name="azul_marinho_fundo_menu">#80060821</color>
 </resources>

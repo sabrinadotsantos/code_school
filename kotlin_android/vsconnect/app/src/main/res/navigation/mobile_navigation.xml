@@ -3,23 +3,17 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/mobile_navigation"
-            app:startDestination="@+id/nav_home">
+            app:startDestination="@+id/nav_servicos">
 
     <fragment
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_editar_imagem"
             android:name="com.example.vsconnect_kotlin.views.EditarImagemFragment"
-            android:label="@string/menu_home"
-            tools:layout="@layout/fragment_home"/>
+            android:label="@string/menu_editar_imagem"
+            tools:layout="@layout/fragment_editar_imagem"/>
 
     <fragment
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_servicos"
             android:name="com.example.vsconnect_kotlin.views.ListaServicosFragment"
-            android:label="@string/menu_gallery"
-            tools:layout="@layout/fragment_gallery"/>
-
-    <fragment
-            android:id="@+id/nav_slideshow"
-            android:name="com.example.vsconnect_kotlin.views.slideshow.SlideshowFragment"
-            android:label="@string/menu_slideshow"
-            tools:layout="@layout/fragment_slideshow"/>
+            android:label="@string/menu_lista_servicos"
+            tools:layout="@layout/fragment_lista_servicos"/>
 </navigation>

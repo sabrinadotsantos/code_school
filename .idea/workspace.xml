@@ -4,18 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c80d2cd-9ea3-4459-a509-a05f82dad028" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculadoraConversao/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraConversao/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculadoraImc/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraImc/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculadoraImc/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraImc/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculadoraImc/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraImc/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculadoraImc/app/src/main/java/com/example/calculadoraimc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraImc/app/src/main/java/com/example/calculadoraimc/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculadoraImc/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraImc/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculadoraImc/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraImc/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculadoraImc/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraImc/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculadoraImc/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraImc/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculadoraImc/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraImc/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+    <list default="true" id="4f2dca7d-3aee-4fd0-8934-e20e575a8171" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/LoginActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/drawable/icone_lapis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/drawable/logo_dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/drawable/logo_light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/font/titilliumweb_bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/font/titilliumweb_light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/views/EditarImagemFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/views/EditarImagemFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/views/ListaServicosFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/views/ListaServicosFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/layout/app_bar_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/layout/app_bar_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/layout/fragment_gallery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/layout/fragment_lista_servicos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/layout/fragment_editar_imagem.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/layout/fragment_slideshow.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/menu/activity_main_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/menu/activity_main_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/menu/main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,19 +59,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2asV5wQM9l3CtHVNQAJ5PMpvoqR" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/46675942840/Desktop/code_school&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/46675942840/Desktop/code_school/kotlin_android/vsconnect"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
