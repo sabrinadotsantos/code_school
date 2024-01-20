@@ -12,6 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
     </style>
     <style name="Theme.Vsconnect_kotlin.NoActionBar">
         <item name="windowActionBar">false</item>
