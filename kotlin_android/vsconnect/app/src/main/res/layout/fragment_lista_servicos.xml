@@ -31,5 +31,9 @@
             android:layout_marginTop="80dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/recycleServicos"
+            tools:listitem="@layout/fragment_servico"
+
     />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

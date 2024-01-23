@@ -37,9 +37,22 @@
               android:fontFamily="@font/titilliumweb_bold"
               android:text="R$ 900.00"
               android:gravity="end"
-
       />
 
    </LinearLayout>
+
+   <TextView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/descricaServico"
+           android:textSize="16sp"
+           android:textColor="@color/black"
+           android:fontFamily="@font/titilliumweb_light"
+           android:maxLength="200"
+           android:layout_marginTop="8dp"
+           android:text="A busca por conhecimento impulsiona a evolução. Cada descoberta é um passo em direção ao progresso humano. Em um mundo dinâmico, aprender é a chave para desvendar novos horizontes e alcançar o potencial máximo."
+           />
+
+
 
 </LinearLayout>
