@@ -5,9 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.vsconnect_kotlin.apis.EndpointInterface
+import com.example.vsconnect_kotlin.apis.RetrofitConfig
 import com.example.vsconnect_kotlin.databinding.FragmentListaServicosBinding
 
 class ListaServicosFragment : Fragment() {
+
+    private val clienteRetrofit = RetrofitConfig.obterInstanciaRetrofit()
+    private val endpoints = clienteRetrofit.create(EndpointInterface::class.java)
 
     private var _binding: FragmentListaServicosBinding? = null
 

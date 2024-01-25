@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.vsconnect_kotlin.databinding.ActivityLoginBinding
+import com.example.vsconnect_kotlin.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 

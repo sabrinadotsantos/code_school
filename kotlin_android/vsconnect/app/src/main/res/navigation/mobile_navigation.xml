@@ -11,13 +11,12 @@
             android:label="@string/menu_editar_imagem"
             tools:layout="@layout/fragment_editar_imagem">
 
-        <action
-                android:id="@+id/action_nav_editar_imagem_to_nav_servicos"
-                app:destination="@id/nav_servicos"/>
+        <action android:id="@+id/action_nav_editar_imagem_to_nav_servicos" app:destination="@id/nav_servicos"/>
 
         <action
                 android:id="@+id/action_nav_editar_imagem_to_nav_sair"
-                app:destination="@+id/nav_sair"/> <!--        action para direcionar para tela login-->
+                app:destination="@+id/nav_sair"
+        />
 
     </fragment>
 
@@ -27,13 +26,13 @@
             android:label="@string/menu_lista_servicos"
             tools:layout="@layout/fragment_lista_servicos">
 
-        <action
-                android:id="@+id/action_nav_servicos_to_nav_editar_imagem"
-                app:destination="@id/nav_editar_imagem"/>
+        <action android:id="@+id/action_nav_servicos_to_nav_editar_imagem" app:destination="@id/nav_editar_imagem"/>
 
         <action
                 android:id="@+id/action_nav_servicos_to_nav_sair"
-                app:destination="@+id/nav_sair"/>
+                app:destination="@+id/nav_sair"
+        />
 
     </fragment>
+
 </navigation>

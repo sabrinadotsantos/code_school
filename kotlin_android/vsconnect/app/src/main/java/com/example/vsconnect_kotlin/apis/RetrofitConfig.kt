@@ -4,13 +4,12 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitConfig {
-
     companion object{
-        fun obterInstanciaRetrofit(url: String = ""): Retrofit
+        fun obterInstanciaRetrofit(url: String = "http://172.16.52.61:8099/") : Retrofit{
             return Retrofit.Builder()
                 .baseUrl(url)
-                .addConverterFactory(G)
-
-
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+        }
     }
 }
