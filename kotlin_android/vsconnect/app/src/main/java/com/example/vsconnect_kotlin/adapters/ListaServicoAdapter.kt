@@ -1,6 +1,7 @@
 package com.example.vsconnect_kotlin.adapters
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -16,10 +17,10 @@ class ListaServicoAdapter(
 
 ) : RecyclerView.Adapter<ListaServicoAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         //funcao responsavel por chamar e atribuir valores para as views do item da RecyclerView
-        fun vincularDadosNoItem(servico: Servico){
+        fun vincularDadosNoItem(servico: Servico) {
             val tituloServico = itemView.findViewById<TextView>(R.id.nomeServico)
             tituloServico.text = servico.titulo
 
@@ -34,14 +35,22 @@ class ListaServicoAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListaServicoAdapter.ViewHolder {
-        TODO("Not yet implemented")
+
+        val inflater = LayoutInflater.from(context);
+
+        val view = inflater.inflate(R.layout.fragment_servico, parent, false)
+        return ViewHolder(view)
+
     }
 
+
     override fun onBindViewHolder(holder: ListaServicoAdapter.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val itemServico = listaServicos[position]
+
+        holder.vincularDadosNoItem(itemServico)
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+     return listaServicos.size
     }
 }

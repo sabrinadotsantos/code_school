@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f2dca7d-3aee-4fd0-8934-e20e575a8171" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/adapters/ListaServicoAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/models/Login.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/LoginActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/adapters/ListaServicoAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/adapters/ListaServicoAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/apis/EndpointInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/apis/EndpointInterface.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/apis/RetrofitConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/apis/RetrofitConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/views/ListaServicosFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/kotlin_android/vsconnect/app/src/main/java/com/example/vsconnect_kotlin/views/ListaServicosFragment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
