@@ -13,5 +13,5 @@ interface EndpointInterface {
     fun listarServicos() : Call<List<Servico>>
 
     @POST("login")
-    fun login (@Body usuario: Login): Call<JsonObject>
+    fun login (@Body usuario: Login) : Call<JsonObject>
 }
