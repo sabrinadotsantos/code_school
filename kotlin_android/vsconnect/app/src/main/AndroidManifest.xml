@@ -4,11 +4,15 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
+<!--    permissao do acesso a galeria/ camera-->
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+
     <application
 
             android:usesCleartextTraffic="true"
-
-
 
             android:allowBackup="true"
             android:dataExtractionRules="@xml/data_extraction_rules"
@@ -35,7 +39,6 @@
                 android:exported="true"
                 android:theme="@style/Theme.Vsconnect_kotlin.NoActionBar">
         </activity>
-
 
 
     </application>
